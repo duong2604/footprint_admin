@@ -1,14 +1,9 @@
-import React from "react";
 import { Separator } from "@radix-ui/react-separator";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "./ui/breadcrumb";
+import LanguageItem from "./language-item";
+import { ModeToggle } from "./mode-toggle";
+import NotificationItem from "./notification-item";
 import { SidebarTrigger } from "./ui/sidebar";
+import AvatarItem from "./avatar-item";
 
 export default function Header() {
   return (
@@ -18,17 +13,12 @@ export default function Header() {
         orientation="vertical"
         className="mr-2 data-[orientation=vertical]:h-4"
       />
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem className="hidden md:block">
-            <BreadcrumbLink href="#">Building Your Application</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator className="hidden md:block" />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <div className="flex w-full items-center justify-end gap-2">
+        <LanguageItem />
+        <ModeToggle />
+        <NotificationItem />
+        <AvatarItem />
+      </div>
     </header>
   );
 }
