@@ -65,7 +65,7 @@ export function TeamSwitcher({
             </DropdownMenuLabel>
             {teams.map((team, index) => (
               <DropdownMenuItem
-                key={team.name}
+                key={index}
                 onClick={() => setActiveTeam(team)}
                 className="gap-2 p-2"
               >
