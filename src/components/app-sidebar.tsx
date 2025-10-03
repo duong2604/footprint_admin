@@ -64,31 +64,31 @@ const data = {
       items: [
         {
           title: "Products",
-          url: "#",
+          url: "/products",
         },
         {
           title: "Categories",
-          url: "#",
+          url: "/categories",
         },
         {
           title: "Attributes",
-          url: "#",
+          url: "/attributes",
         },
         {
           title: "Coupon",
-          url: "#",
+          url: "/coupon",
         },
       ],
     },
     {
       title: "Customers",
-      url: "#",
+      url: "/customers",
       icon: UserLock,
       items: [],
     },
     {
       title: "Orders",
-      url: "#",
+      url: "/orders",
       icon: ShoppingBag,
       items: [],
     },
