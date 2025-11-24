@@ -31,16 +31,20 @@ interface SheetFormProps {
       };
     };
   };
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 const SheetForm = ({
   children,
   sheet,
+  open,
+  onOpenChange,
   ...props
 }: SheetFormProps & React.ComponentProps<any>) => {
   return (
     <>
-      <Sheet>
+      <Sheet open={open} onOpenChange={onOpenChange}>
         <SheetTrigger asChild>
           <Button className="bg-cyan-500 text-white hover:cursor-pointer">
             <Plus /> {sheet.trigger.title}
